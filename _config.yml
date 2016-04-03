@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 #   General Build Settings
 #
 #   Url
-baseurl: "/jekyll-start"            # remote
+baseurl: "/jekyll-portfolio-start"            # remote
 #baseurl: ""                 # local
 url: ""                     # the base hostname & protocol for your site
 imagepath: "/images/"
