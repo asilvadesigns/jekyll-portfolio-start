@@ -1,0 +1,56 @@
+#
+#   General Site Settigns
+#
+author: Author
+title: Your awesome title
+email: author@dealeron.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is a good starting point for a jekyll portfolio site. Included is
+  a blog, lazy load, sass, gulp, and a few other goodies to get you up and
+  running quickly. Enjoy!
+
+#
+#   General Build Settings
+#
+#   Url
+#baseurl: "/jekyll-start"            # remote
+baseurl: ""                 # local
+url: ""                     # the base hostname & protocol for your site
+imagepath: "/images/"
+projectimagepath: "/images/projects/"
+permalink: pretty
+
+#   Require gems
+#   gems:
+#       - jekyll-paginate
+
+#   Include files/folders
+include:
+    - _pages
+
+#   Exclude files/folders
+exclude:
+    - LICENSE
+    - README.md
+    - gulpfile.js
+    - node_modules
+    - package.json
+
+#   Set collection(s) output
+collections:
+    pages:
+        output: true
+    projects:
+        output: true
+
+#   Set collection(s) layout
+defaults:
+    - scope:
+        type: pages
+      values:
+        layout: page
+
+    - scope:
+        type: projects
+      values:
+        layout: project

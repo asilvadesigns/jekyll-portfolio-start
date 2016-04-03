@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% capture project_path %}{{ site.baseurl }}{{ site.projectimagepath }}{% endcapture %}
+
+<header>
+    <div class="container">
+        <h1>{{ page.project-title}}</h1>
+    </div>
+</header>
+
+<section style="background-color: #111;">
+    <div style="margin: 0 auto;" class="container">
+        <div class="project__slider slider js_slider">
+            <div class="frame js_frame">
+                <ul class="slides js_slides">
+                    {% for image in page.images %}
+                    <li class="js_slide"><img src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}"></li>
+                    <li class="js_slide"><img src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}"></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <span class="js_prev prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#ffffff" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"></path></g></svg>
+            </span>
+            <span class="js_next next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#ffffff" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
+            </span>
+        </div>
+    </div>
+</section>
+
+{{ content }}
+
+<footer>
+    <div class="container">
+        {% if page.next and page.next.categories contains "portfolio" %}
+            <a href="{{ page.next.url | prepend: site.baseurl }}">Next Post</a>
+            <span>{{ page.next.project-title }}</span>
+        {% else if page.previous and page.previous.categories contains "portfolio" %}
+            <a href="{{ page.previous.url | prepend: site.baseurl }}">Previous Post</a>
+            <span>{{ page.previous.project-title }}</span>
+        {% endif %}
+    </div>
+</footer>

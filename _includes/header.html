@@ -1,0 +1,19 @@
+<header>
+
+    <nav class="nav">
+
+        <div class="nav__group">
+
+            <a class="nav__item" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+        </div>
+
+        <div class="nav__group">
+            {% assign pagelist = site.pages | sort: 'navorder' %}
+            {% assign navgroup = 'main' %}
+            {% include nav.html %}
+        </div>
+
+    </nav>
+
+</header>

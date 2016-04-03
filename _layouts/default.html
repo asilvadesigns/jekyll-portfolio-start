@@ -1,0 +1,26 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+
+<html>
+
+    {% include head.html %}
+
+    <body class="{{ page.title | downcase }}">
+
+        {% include header.html %}
+
+        <main>
+
+            {{ content }}
+
+        </main>
+
+        {% include footer.html %}
+
+        {% include js.html %}
+
+    </body>
+
+</html>

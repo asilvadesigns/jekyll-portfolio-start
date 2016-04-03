@@ -1,0 +1,22 @@
+---
+layout:     default
+title:      home
+permalink:  "/"
+navgroup:   "main"
+navorder:   1
+---
+{% capture project_path %}{{ site.baseurl }}{{ site.projectimagepath }}{% endcapture %}
+{% assign projects = site.projects | sort: listing-priority %}
+
+<div class="gallery projects">
+    {% for project in projects %}
+    <a class="gallery__item project__item" href="{{ project.url | prepend: site.baseurl }}">
+        {% for image in project.images %}
+        <img class="gallery__image project__image b-lazy" src="{{ project_path }}{{ image.image }}" data-src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
+        {% endfor %}
+        <div class="project__details">
+            <h3 class="project__title">{{ project.project-title }}</h3>
+        </div>
+    </a>
+    {% endfor %}
+</div>

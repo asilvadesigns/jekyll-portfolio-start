@@ -1,0 +1,22 @@
+<script src="{{ '/js/blazy.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/lory.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+    /* {% include script.js %} */
+
+    window.onload = function() {
+        ;(function() {
+            var bLazy = new Blazy();
+        })();
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var ease = document.querySelector('.js_slider');
+
+        lory(ease, {
+            infinite: 4,
+            slidesToScroll: 1,
+            slideSpeed: 1000,
+            ease: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)'
+        });
+    });
+</script>

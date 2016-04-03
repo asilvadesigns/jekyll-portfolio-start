@@ -1,0 +1,15 @@
+---
+layout:     page
+title:      blog
+permalink:  "/blog/"
+navgroup:   "main"
+navorder:   4
+---
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <time class="float--right" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d, %Y' }}</time>
+    </li>
+    {% endfor %}
+</ul>
