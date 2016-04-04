@@ -3,13 +3,7 @@ layout: default
 ---
 {% capture project_path %}{{ site.baseurl }}{{ site.projectimagepath }}{% endcapture %}
 
-<header>
-    <div class="container">
-        <h1>{{ page.project-title}}</h1>
-    </div>
-</header>
-
-<section style="background-color: #111;">
+<div style="background-color: #111;">
     <div style="margin: 0 auto;" class="container">
         <div class="project__slider slider js_slider">
             <div class="frame js_frame">
@@ -28,9 +22,19 @@ layout: default
             </span>
         </div>
     </div>
-</section>
+</div>
 
-{{ content }}
+<header>
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        {{ content }}
+    </div>
+</section>
 
 <footer>
     <div class="container">

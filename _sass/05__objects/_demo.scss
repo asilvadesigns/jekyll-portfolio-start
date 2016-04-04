@@ -11,6 +11,11 @@ body {
     max-width: 40em;
     padding: 0 rhythm(1);
 }
+
+.container--centered {
+    margin-right: auto;
+    margin-left: auto;
+}
 /*
  *  Gallery
  */
@@ -167,7 +172,7 @@ body {
  */
 .footer {
     margin-top : rhythm(4);
-    padding: rhythm(2) 0;
+    padding: rhythm(1) 0 0;
 }
 
 .home .footer {
